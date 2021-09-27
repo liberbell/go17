@@ -11,4 +11,9 @@ func main() {
 		resonseWriter.WriteHeader(http.StatusNotFound)
 		io.WriteString(resonseWriter, "This is a test response.")
 	}))
+
+	defer testServer.Close()
+
+	response, _ := http.Get(testServer.URL)
+	responseBody, _ := io.ReadAll(response.Body)
 }
