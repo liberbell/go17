@@ -12,4 +12,6 @@ func main() {
 	}
 
 	request := httptest.NewRequest("GET", "http://testurl.com", nil)
+	recorder := httptest.NewRecorder()
+	testHTTPCall(recorder, request)
 }
