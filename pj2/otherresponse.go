@@ -16,8 +16,8 @@ func main() {
 	defer testServer.Close()
 
 	response, _ := http.Get(testServer.URL)
-	// responseBody, _ := io.ReadAll(response.Body)
+	responseBody, _ := io.ReadAll(response.Body)
 
 	fmt.Println(response.StatusCode)
-	// fmt.Println(string(responseBody))
+	fmt.Println(string(responseBody))
 }
