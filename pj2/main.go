@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -17,5 +18,8 @@ func main() {
 
 	response := recorder.Result()
 	responseBody, _ := io.ReadAll(response.Body)
+
+	fmt.Println(response.StatusCode)
+	fmt.Println(string(responseBody))
 
 }
