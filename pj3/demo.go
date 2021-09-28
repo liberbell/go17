@@ -5,3 +5,8 @@ type Car struct {
 	Model string
 	Year  int
 }
+
+type Person struct {
+	FirstName string
+	LastName  string
+}
