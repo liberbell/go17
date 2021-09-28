@@ -11,5 +11,5 @@ type CarHandler struct {
 }
 
 func (h *CarHandler) ServeHTTP(w http.ResponseWriter, r http.Request) {
-	fmt.Fprintf
+	fmt.Fprintf(w "Make: %v -- Model: %v -- Year: %v", h.Car.Make, h.Car.Model, h.Car.Year)
 }
