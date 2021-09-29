@@ -17,3 +17,7 @@ func (h *CarHandler) ServeHTTP(w http.ResponseWriter, r http.Request) {
 type PersonHandler struct {
 	Person demo.Person
 }
+
+func (h *PersonHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Name: %v %v ", h.PersonHandler.FirstName, h.PersonHandler.LastName)
+}
