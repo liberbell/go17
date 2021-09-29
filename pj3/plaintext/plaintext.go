@@ -7,7 +7,7 @@ import (
 )
 
 type CarHandler struct {
-	car.demo.Car
+	Car demo.Car
 }
 
 func (h *CarHandler) ServeHTTP(w http.ResponseWriter, r http.Request) {
