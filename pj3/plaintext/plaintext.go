@@ -20,5 +20,5 @@ type PersonHandler struct {
 }
 
 func (h *PersonHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Name: %v %v ", h.PersonHandler.FirstName, h.PersonHandler.LastName)
+	fmt.Fprintf(w, "Name: %v %v ", h.Person.FirstName, h.Person.LastName)
 }
