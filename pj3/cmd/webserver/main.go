@@ -5,6 +5,7 @@ import (
 
 	"demo.com/demo"
 	"demo.com/demo/html"
+	"demo.com/demo/plaintext"
 )
 
 func main() {
