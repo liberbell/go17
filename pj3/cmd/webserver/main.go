@@ -13,4 +13,6 @@ func main() {
 
 	http.Handle("/person/plaintext", &plaintext.PersonHandler{demo.Person{"Bob", "Smith"}})
 	http.Handle("/car/plaintext", &plaintext.CarHandler{demo.Car{"Ford", "Fiesta", 2005}})
+
+	http.ListenAndServe(":8001", nil)
 }
