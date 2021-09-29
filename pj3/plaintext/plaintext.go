@@ -1,8 +1,9 @@
 package plaintext
 
 import (
-	"net/http"
 	"fmt"
+	"net/http"
+
 	"demo.com/demo"
 )
 
@@ -11,7 +12,7 @@ type CarHandler struct {
 }
 
 func (h *CarHandler) ServeHTTP(w http.ResponseWriter, r http.Request) {
-	fmt.Fprintf(w "Make: %v -- Model: %v -- Year: %v", h.Car.Make, h.Car.Model, h.Car.Year)
+	fmt.Fprintf(w, "Make: %v -- Model: %v -- Year: %v", h.Car.Make, h.Car.Model, h.Car.Year)
 }
 
 type PersonHandler struct {
