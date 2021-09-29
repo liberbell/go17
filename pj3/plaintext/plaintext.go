@@ -11,7 +11,7 @@ type CarHandler struct {
 	Car demo.Car
 }
 
-func (h *CarHandler) ServeHTTP(w http.ResponseWriter, r http.Request) {
+func (h *CarHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Make: %v -- Model: %v -- Year: %v", h.Car.Make, h.Car.Model, h.Car.Year)
 }
 
