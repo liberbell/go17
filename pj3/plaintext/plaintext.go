@@ -1,4 +1,4 @@
-package planetext
+package plaintext
 
 import (
 	"net/http"
