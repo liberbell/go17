@@ -18,4 +18,7 @@ func main() {
 	http.HandleFunc("/demopath2/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "html/demopath2.html")
 	})
+
+	http.ListenAndServe(":8001", nil)
+
 }
