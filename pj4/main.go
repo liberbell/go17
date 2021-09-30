@@ -10,4 +10,12 @@ func main() {
 	http.HandleFunc("/demopath1/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "html/demopath1.html")
 	})
+
+	http.HandleFunc("/demopath1/subpath", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "html/demopath1_subpath.html")
+	})
+
+	http.HandleFunc("/demopath2/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "html/demopath2.html")
+	})
 }
