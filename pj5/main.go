@@ -7,7 +7,7 @@ func main() {
 
 	http.Handle("/projectfiles/", http.StripPrefix("/projectfiles", fs))
 
-	http.HandleFunc("samplepdf", func(res http.ResponseWriter, req *http.Request) {
+	http.HandleFunc("/samplepdf", func(res http.ResponseWriter, req *http.Request) {
 		http.ServeFile(res, req, "/pj5/pdf/matplotlib.pdf")
 	})
 
