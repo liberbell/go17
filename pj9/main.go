@@ -11,5 +11,7 @@ func NameHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	router := httprouter.New()
-	router.GET("/")
+	router.GET("/name/:firstname/:lastname/", NameHandler)
+
+	http.ListenAndServe(":8001", router)
 }
