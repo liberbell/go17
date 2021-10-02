@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -10,7 +11,10 @@ func CustomHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func LogRequests(handler http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request))
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		log.Printf("About to serve request.")
+		handler.ServeHTTP(w, r)
+	})
 }
 
 func main() {
