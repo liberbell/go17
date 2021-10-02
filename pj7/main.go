@@ -27,4 +27,6 @@ func (c *CarHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.Handle("/person", &PersonHandler{"Bob", "Smith"})
 	http.Handle("/car", &CarHandler{"Ford", "Fiesta", 2005})
+
+	http.ListenAndServe(":8001", nil)
 }
