@@ -16,5 +16,7 @@ func TestHandlerFunc(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	htt.Handle
+	http.Handle("/handler", &TestHandler{})
+	http.HandleFunc("/handlerfunc", TestHandlerFunc)
+	http.ListenAndServe(":8001", nil)
 }
