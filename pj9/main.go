@@ -11,4 +11,5 @@ func NameHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	router := httprouter.New()
+	router.GET("/")
 }
