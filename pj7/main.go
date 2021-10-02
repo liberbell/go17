@@ -25,5 +25,5 @@ func (c *CarHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.Handle("/person")
+	http.Handle("/person", &PersonHandler{"Bob", "Smith"})
 }
