@@ -21,4 +21,7 @@ func LogRequests(handler http.Handler) http.Handler {
 func main() {
 	serveMux := http.NewServeMux()
 	serveMux.HandleFunc("/custom/", CustomHandler)
+
+	loggedserveMux := LogRequests(serveMux)
+	http.ListenAndServe(":8001", loggedserveMux)
 }
