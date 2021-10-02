@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func NameHandler(w http.ResponseWriter, r *http.Request) {
+func NameHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	fmt.Fprintf(w, "Name: %s %s", p.ByName("firstname"), p.ByName("lastname"))
 }
 
