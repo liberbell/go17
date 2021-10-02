@@ -11,6 +11,10 @@ func (h *TestHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "This is a custom handler called TestHandler.")
 }
 
+func TestHandlerFunc(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "This is a customer handler function called TestHandlerFunc.")
+}
+
 func main() {
 	htt.Handle
 }
